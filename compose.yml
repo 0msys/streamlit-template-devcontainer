@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  template:   # "template"を任意の名前に変更
+    container_name: template    # "template"を任意の名前に変更
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: prd
+    tty: true
+    ports:
+      - "8501:8501"
